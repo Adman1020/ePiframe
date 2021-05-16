@@ -24,7 +24,8 @@ class convertmanager:
 		'3'	:	'{} {} -limit thread 1 {}{}-sample {}x{} -dither FloydSteinberg -remap pattern:gray50 {}-background {} -gravity center -extent {}x{} -type bilevel {}',
 		'4'	:	'{} {} -limit thread 1 {}{}-sample {}x{} -dither FloydSteinberg -ordered-dither o4x4 {}-background {} -gravity center -extent {}x{} -type bilevel {}',
 		'5'	:	'{} {} -limit thread 1 {}{}-sample {}x{} {}-background {} -gravity center -extent {}x{} -type bilevel {}',
-		'6'	:	'{} {} -limit thread 1 {}{}-sample {}x{} -colors 2 +dither {}-background {} -gravity center -extent {}x{} -type bilevel {}'
+		'6'	:	'{} {} -limit thread 1 {}{}-sample {}x{} -colors 2 +dither {}-background {} -gravity center -extent {}x{} -type bilevel {}',
+		'7'	:	'{} {} -limit thread 1 {}{}-sample {}x{} -dither FloydSteinberg -define dither:diffusion-amount=85% -remap eink-2color.png {}-background {} -gravity center -extent {}x{} -type bilevel {}'
 	}
 		
 	def __convert_option (self, origwidth:int, origheight:int, option:int, bin:str, srcfile:str, width:int, height:int, invert:int, horizontal:int, back:str, target:str):
